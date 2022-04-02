@@ -1,6 +1,9 @@
 # prosjekt
 Prosjekt for elever på VGS.
 
+Målet med oppgaven er å lage et program som henter ut data og setter inn data i en database.
+Databasen skal inneholde tre forskjellige tabeller. Disse tabellense skal settes opp slik at de kan kombineres og skape 
+
 ## **Huskeliste av oppgaver**
 
 - [ ] [Legg til gruppemedlemmer i repo som utviklere.](/README.md#legge-til-gruppemedlemmer-i-repository)
