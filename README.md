@@ -6,10 +6,11 @@ Databasen skal inneholde tre forskjellige tabeller. Disse tabellense skal settes
 
 ## **Huskeliste av oppgaver**
 
+- [ ] [Lag fork av dette repositoryet]
 - [ ] [Legg til gruppemedlemmer i repo som utviklere.](/README.md#legge-til-gruppemedlemmer-i-repository)
 - [ ] [Sett opp .gitignore for IDE filer.](/README.md#sett-opp-.gitignore-for-IDE-filer)
 - [ ] [Endre på branch regler - Ikke lov å "pushe" til master branch.](/README.md#endre-branch-regler)
-- [ ] [Lag plan for prosjekt/programm struktur.](/README.md#lag-plan-for-prosjekt/programm-struktur)
+- [ ] [Lag plan for prosjekt/program struktur.](/README.md#lag-plan-for-prosjekt/programm-struktur)
 - [ ] [Lag plan for database struktur.](/README.md#lag-plan-for-database-struktur)
 
 
@@ -19,12 +20,21 @@ Databasen skal inneholde tre forskjellige tabeller. Disse tabellense skal settes
 
 
 ## Legge til gruppemedlemmer i repository 
+- Oppe i venstre hjørne av GitLab finner du **"Members"** under **"Project Information"** kategorien.
+- Trykk deretter på **"Invite members"** nær toppen på høyre siden av **"Members"** tabben.
+
+![Gitlab add members](Images/gitlab-add-members.png)
+
+- Inviter gruppemedlemmene som **Maintainer** eller **Developer**, inviter også stian.pedersen1996 som **Reporter**.
+
+![Gitlab add roles](Images/gitlab-member-roles.png)
+
 
 ## Sett opp .gitignore for IDE filer
 
 ## Endre branch regler
 
-## Lag plan for prosjekt/programm struktur
+## Lag plan for prosjekt/program struktur
 
 ## Lag plan for database struktur
 
@@ -34,6 +44,7 @@ Lag en UML tenging av tabeller og hvilken data som skal inn i tabellene, sett de
  - Bruker: 
     - Navn
     - Nummer
+    - E-Mail
     - ID
  - Drikke
     - Merke/produsent
@@ -42,6 +53,7 @@ Lag en UML tenging av tabeller og hvilken data som skal inn i tabellene, sett de
     - andre detaljer
     - ID
   - Review
+    - terningskast
     - Review
     - Forfatter
     - Hva er det/type og merke
