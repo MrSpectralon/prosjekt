@@ -6,7 +6,7 @@ Databasen skal inneholde tre forskjellige tabeller. Disse tabellense skal settes
 
 ## **Huskeliste av oppgaver**
 
-- [ ] [Lag fork av dette repositoryet]
+- [ ] [Lag fork av dette repositoryet](/README.md#fork-prosjekt)
 - [ ] [Legg til gruppemedlemmer i repo som utviklere.](/README.md#legge-til-gruppemedlemmer-i-repository)
 - [ ] [Sett opp .gitignore for IDE filer.](/README.md#sett-opp-.gitignore-for-IDE-filer)
 - [ ] [Endre på branch regler - Ikke lov å "pushe" til master branch.](/README.md#endre-branch-regler)
@@ -16,8 +16,12 @@ Databasen skal inneholde tre forskjellige tabeller. Disse tabellense skal settes
 
 ---
 
+## Fork prosjektet
+
+For å forke prosjektet så trykker du på **fork** som ligger oppe til høyre på denne siden (repository root directory).
 
 
+![Fork repo](Images/fork-project.png)
 
 ## Legge til gruppemedlemmer i repository 
 - Oppe i venstre hjørne av GitLab finner du **"Members"** under **"Project Information"** kategorien.
