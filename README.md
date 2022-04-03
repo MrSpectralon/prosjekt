@@ -1,4 +1,13 @@
 # prosjekt
+### Gruppe:
+```
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+```
+
 Prosjekt for elever på VGS.
 
 
@@ -37,6 +46,8 @@ Sett **Project name** til å være hydro_reviews_[+gruppenummer] (f.ex: hydro_re
 - Inviter gruppemedlemmene som **Maintainer** eller **Developer**, inviter også stian.pedersen1996 som **Reporter**.
 
 ![Gitlab add roles](Images/gitlab-member-roles.png)
+
+Etter dette er gjort så legger dere inn alle gruppe medlemmene inn på toppen av denne README.md fila.
 
 ---
 
