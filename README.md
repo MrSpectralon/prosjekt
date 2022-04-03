@@ -1,12 +1,10 @@
 # prosjekt
-### Gruppe:
-```
-{
-  "firstName": "John",
-  "lastName": "Smith",
-  "age": 25
-}
-```
+
+| Gruppe | (bytt med nummer) |
+| ------ | -------- |
+| Fornavn | Etternavn |
+| Fornavn | Etternavn |
+| Fornavn | Etternavn |
 
 Prosjekt for elever på VGS.
 
