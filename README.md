@@ -1,17 +1,19 @@
 # prosjekt
 Prosjekt for elever på VGS.
 
+
 Målet med oppgaven er å lage et program som henter ut data og setter inn data i en database.
 Databasen skal inneholde tre forskjellige tabeller. Disse tabellense skal settes opp slik at de kan kombineres og skape 
 
 ## **Huskeliste av oppgaver**
 
-- [ ] [Lag fork av dette repositoryet](/README.md#fork-prosjekt)
-- [ ] [Legg til gruppemedlemmer i repo som utviklere.](/README.md#legge-til-gruppemedlemmer-i-repository)
-- [ ] [Sett opp .gitignore for IDE filer.](/README.md#sett-opp-.gitignore-for-IDE-filer)
-- [ ] [Endre på branch regler - Ikke lov å "pushe" til master branch.](/README.md#endre-branch-regler)
-- [ ] [Lag plan for prosjekt/program struktur.](/README.md#lag-plan-for-prosjekt/programm-struktur)
-- [ ] [Lag plan for database struktur.](/README.md#lag-plan-for-database-struktur)
+1. [ ] [Lag fork av dette repositoryet](/README.md#fork-prosjekt)
+2. [ ] [Legg til gruppemedlemmer i repo som utviklere.](/README.md#legge-til-gruppemedlemmer-i-repository)
+3. [ ] [Sett opp .gitignore for IDE filer.](/README.md#sett-opp-.gitignore-for-IDE-filer)
+4. [ ] [Endre på branch regler - Ikke lov å "pushe" til master branch.](/README.md#endre-branch-regler)
+5. [ ] [Lag plan for database struktur.](/README.md#lag-plan-for-database-struktur)
+6. [ ] [Lag plan for prosjekt/program struktur.](/README.md#lag-plan-for-prosjekt/programm-struktur)
+
 
 
 ---
@@ -20,8 +22,11 @@ Databasen skal inneholde tre forskjellige tabeller. Disse tabellense skal settes
 
 For å forke prosjektet så trykker du på **fork** som ligger oppe til høyre på denne siden (repository root directory).
 
+Sett **Project name** til å være hydro_reviews_[+gruppenummer] (f.ex: hydro_reviews_01) og sett deretter prosjektet til å være privat.
 
 ![Fork repo](Images/fork-project.png)
+
+---
 
 ## Legge til gruppemedlemmer i repository 
 - Oppe i venstre hjørne av GitLab finner du **"Members"** under **"Project Information"** kategorien.
@@ -33,6 +38,7 @@ For å forke prosjektet så trykker du på **fork** som ligger oppe til høyre p
 
 ![Gitlab add roles](Images/gitlab-member-roles.png)
 
+---
 
 ## Sett opp .gitignore for IDE filer
 
