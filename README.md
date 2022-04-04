@@ -1,32 +1,39 @@
 # prosjekt
 
+
 | Gruppe | (bytt med nummer) |
 | ------ | -------- |
 | Fornavn | Etternavn |
 | Fornavn | Etternavn |
 | Fornavn | Etternavn |
 
-Prosjekt for elever på VGS.
+---
 
+Prosjekt for elever på VGS.
 
 Målet med oppgaven er å lage et program som henter ut data og setter inn data i en database.
 Databasen skal inneholde tre forskjellige tabeller. Databasen og tabellene skal settes opp slik at de følger kravene til [3NF](https://en.wikipedia.org/wiki/Third_normal_form).
 
 Programmet som kommuniserer med databasen kan skrives i Pyton eller JavaScript - Dette velger gruppen selv.
 
+---
 
 ## **Huskeliste av oppgaver**
 
-1. [ ] [Lag fork av dette repositoryet](/README.md#fork-prosjekt)
-2. [ ] [Legg til gruppemedlemmer i repo som utviklere.](/README.md#legge-til-gruppemedlemmer-i-repository)
-3. [ ] [Sett opp .gitignore for IDE filer.](/README.md#sett-opp-.gitignore-for-IDE-filer)
-4. [ ] [~~Endre på branch regler - Ikke lov å "pushe" til master branch.~~](/README.md#endre-branch-regler)
-5. [ ] [Lag plan for database struktur.](/README.md#lag-plan-for-database-struktur)
-6. [ ] [Lag plan for prosjekt/program struktur.](/README.md#lag-plan-for-prosjekt/programm-struktur)
-
-
+- [ ] [Lag fork av dette repositoryet](/README.md#fork-prosjekt)
+- [ ] [Legg til gruppemedlemmer i repo som utviklere.](/README.md#legge-til-gruppemedlemmer-i-repository)
+- [ ] [Sett opp .gitignore for IDE filer.](/README.md#sett-opp-.gitignore-for-IDE-filer)
+- [ ] [~~Endre på branch regler - Ikke lov å "pushe" til master branch.~~](/README.md#endre-branch-regler)
+- [ ] [Lag plan for database struktur.](/README.md#lag-plan-for-database-struktur)
+- [ ] [Lag plan for prosjekt/program struktur.](/README.md#lag-plan-for-prosjekt/programm-struktur)
 
 ---
+
+## Brukerveileding og hjelp
+
+- [Generellt bruk av Git]()
+- [Database]()
+
 
 ## Fork prosjektet
 
@@ -74,16 +81,20 @@ Etter **.gitignore** fila er satt opp, vil `git status` kun vise de filene vi ø
 
 ![With Gitignore](Images/files-with-gitignore.png)
 
+---
 
 ## ~~Endre branch regler~~
 
 Kan ikke brukes på gratis versioner av GitLab og GitHub 
+
+---
 
 ## Lag plan for prosjekt/program struktur
 
 Tegn en plan/diagram for hvor mange klasser som skal være i programmet og hvordan de skal kommunisere sammen.
 Last det opp som et bilde eller PDF. Dere kan da tegne planen på papir eller bruke et program for tegningen. 
 
+---
 
 ## Lag plan for database struktur
 
@@ -107,4 +118,18 @@ Her anbefaler jeg at dere bruker [Lucid chart](https://www.lucidchart.com/pages/
     - Forfatter
     - Hva er det/type og merke
 
+---
 
+# Veileding
+
+## Git
+
+### GitLab
+
+### Git Bash
+
+---
+
+## Database
+
+### Query
