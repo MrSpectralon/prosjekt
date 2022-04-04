@@ -10,7 +10,10 @@ Prosjekt for elever på VGS.
 
 
 Målet med oppgaven er å lage et program som henter ut data og setter inn data i en database.
-Databasen skal inneholde tre forskjellige tabeller. Disse tabellense skal settes opp slik at de kan kombineres og skape 
+Databasen skal inneholde tre forskjellige tabeller. Databasen og tabellene skal settes opp slik at de følger kravene til [3NF](https://en.wikipedia.org/wiki/Third_normal_form).
+
+Programmet som kommuniserer med databasen kan skrives i Pyton eller JavaScript - Dette velger gruppen selv.
+
 
 ## **Huskeliste av oppgaver**
 
@@ -51,26 +54,43 @@ Etter dette er gjort så legger dere inn alle gruppe medlemmene inn på toppen a
 
 ## Sett opp .gitignore for IDE filer
 
+For å hindre at autogenererte filer som er forskjellige for alle på gruppen, er det nødvendig å sette opp et filter som utelokker disse i fra å bli lastet opp på deres repository.
+
+Bildet under viser et prosjekt der .gitignore filen er tom. IDEen har generert masse filer som vi ikke ønsker å laste opp til git
+
+![All files git](/Images/all-files-git.png)
+
+I dette tilfellet er vi kun interessert i å laste opp filene som de andre på gruppen trenger så vi setter opp **.gitignore** fila til å ignorere de uønskede filene:
+```.gitignore
+#Merk at alt som slutter med "/" er en mappe, og inneholder mange andre filer og mapper.
+#Ved å ekskludere ytterste mappen, ekskluderer du alt innenfor også.
+.gradle/
+.idea/
+gradle/
+local.properties
+```
+
+
 ## Endre branch regler
 
 ## Lag plan for prosjekt/program struktur
 
 ## Lag plan for database struktur
 
-Lag en UML tenging av tabeller og hvilken data som skal inn i tabellene, sett deretter opp relasjoner imellom tabellene, slik at samme dataen ikke blir lagret minst mulig ganger.
+Lag en UML tenging av tabeller og hvilken data som skal inn i tabellene, sett deretter opp relasjoner imellom tabellene, slik at samme dataen ikke blir lagret minst mulig ganger. 
+
 
 ### Databasen skal inneholde:
  - Bruker: 
     - Navn
     - Nummer
     - E-Mail
-    - ID
  - Drikke
     - Merke/produsent
     - Type
     - Pris
-    - andre detaljer
-    - ID
+    - Sukkerinnhold
+    - andre detaljer(optional)
   - Review
     - terningskast
     - Review
