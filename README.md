@@ -20,7 +20,7 @@ Programmet som kommuniserer med databasen kan skrives i Pyton eller JavaScript -
 1. [ ] [Lag fork av dette repositoryet](/README.md#fork-prosjekt)
 2. [ ] [Legg til gruppemedlemmer i repo som utviklere.](/README.md#legge-til-gruppemedlemmer-i-repository)
 3. [ ] [Sett opp .gitignore for IDE filer.](/README.md#sett-opp-.gitignore-for-IDE-filer)
-4. [ ] [Endre på branch regler - Ikke lov å "pushe" til master branch.](/README.md#endre-branch-regler)
+4. [ ] [~~Endre på branch regler - Ikke lov å "pushe" til master branch.~~](/README.md#endre-branch-regler)
 5. [ ] [Lag plan for database struktur.](/README.md#lag-plan-for-database-struktur)
 6. [ ] [Lag plan for prosjekt/program struktur.](/README.md#lag-plan-for-prosjekt/programm-struktur)
 
@@ -71,7 +71,9 @@ local.properties
 ```
 
 
-## Endre branch regler
+## ~~Endre branch regler~~
+
+Kan ikke brukes på gratis versioner
 
 ## Lag plan for prosjekt/program struktur
 
