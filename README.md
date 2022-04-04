@@ -126,6 +126,18 @@ Her anbefaler jeg at dere bruker [Lucid chart](https://www.lucidchart.com/pages/
 
 ### GitLab
 
+For å få bedre arbeidsflyt i GitLab, anbefaler jeg å ta i bruk Kanban brettet(issueboard). Dette er et verktøy som enkelt gir gruppa oversikt over hvilke oppgaver som gjenstår, hvem som jobber med hva, og hva som er ferdig.
+
+Issueboardet begynner ganske tomt, med bare to kategorier (Open og Closed), så for å utnytte brettet ordentlig er det viktig å legge til flere kategorier.
+
+For å legge til flere kategorier trykker du på **Issues** -> **List** og deretter på **New issue** på høyre side av nye siden du åpner, som vist på bildet under.
+
+![Label](Images/git-list-new-issue.png)
+
+Etter det så lager du nye labels 
+
+![New label](Images/create-new-label.png)
+
 ### Git Bash
 
 ---
