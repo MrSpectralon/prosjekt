@@ -77,10 +77,14 @@ Kan ikke brukes på gratis versioner
 
 ## Lag plan for prosjekt/program struktur
 
+Tegn en plan/diagram for hvor mange klasser som skal være i programmet og hvordan de skal kommunisere sammen.
+Last det opp som et bilde eller PDF. Dere kan da tegne planen på papir eller bruke et program for tegningen. 
+
+
 ## Lag plan for database struktur
 
 Lag en UML tenging av tabeller og hvilken data som skal inn i tabellene, sett deretter opp relasjoner imellom tabellene, slik at samme dataen ikke blir lagret minst mulig ganger. 
-
+Her anbefaler jeg at dere bruker [Lucid chart](https://www.lucidchart.com/pages/) til å tegne diagrammene, ettersom det gjør ting oversiktlig og fint.
 
 ### Databasen skal inneholde:
  - Bruker: 
