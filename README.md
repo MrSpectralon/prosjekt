@@ -56,7 +56,7 @@ Etter dette er gjort så legger dere inn alle gruppe medlemmene inn på toppen a
 
 For å hindre at autogenererte filer som er forskjellige for alle på gruppen, er det nødvendig å sette opp et filter som utelokker disse i fra å bli lastet opp på deres repository.
 
-Bildet under viser et prosjekt der .gitignore filen er tom. IDEen har generert masse filer som vi ikke ønsker å laste opp til git
+Bildet under viser et resultatet av kommandoen `git status` i et nytt prosjekt der .gitignore filen er tom og IDE'en har generert masse filer som vi ikke ønsker å laste opp til git.
 
 ![All files git](/Images/all-files-git.png)
 
@@ -70,10 +70,14 @@ gradle/
 local.properties
 ```
 
+Etter **.gitignore** fila er satt opp, vil `git status` kun vise de filene vi ønsker å laste opp>
+
+![With Gitignore](Images/files-with-gitignore.png)
+
 
 ## ~~Endre branch regler~~
 
-Kan ikke brukes på gratis versioner
+Kan ikke brukes på gratis versioner av GitLab og GitHub 
 
 ## Lag plan for prosjekt/program struktur
 
