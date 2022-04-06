@@ -180,11 +180,19 @@ Ekstra Kommandoer for når flere branches er i bruk.
 
 ```bash
 
-git switch <navn på branch> # Går fra nåværende branch og inn på den 
+git switch <branch navn> # Går fra nåværende branch og inn på den 
                             # branchen du skrev inn hvis den eksisterer.
 
-git switch -c <navn på branch> # Gjør det samme som kommandoen over, bare denne 
-                               # lager en ny branch med navnet du skrev inn
+git switch -c <branch navn> # Gjør det samme som kommandoen over, bare denne 
+                               # lager en ny branch med navnet du skrev
+
+git push --set-upstream origin <branch navn> # Må gjøres første gsng du skal 
+                                             # bruke push på en ny branch.
+                                             # Terminalen vil også gi beskjed 
+                                             # om dette om du glemmer det.
+
+
+
 
 ```
 ---
