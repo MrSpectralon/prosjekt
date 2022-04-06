@@ -186,11 +186,18 @@ git switch <branch navn> # Går fra nåværende branch og inn på den
 git switch -c <branch navn> # Gjør det samme som kommandoen over, bare denne 
                                # lager en ny branch med navnet du skrev
 
-git push --set-upstream origin <branch navn> # Må gjøres første gsng du skal 
+git push --set-upstream origin <branch navn> # Må gjøres første gang du skal 
                                              # bruke push på en ny branch.
                                              # Terminalen vil også gi beskjed 
                                              # om dette om du glemmer det.
 
+git rebase origin <branch navn> # Dette er en funksjon som setter en branch som
+                                # "base". Den brukes når din branch ligger en 
+                                # del versjoner bak den branchen du ønsker å
+                                # "merge" med, og gjør slik at din versjon av 
+                                # alle filene på branchen er lik den du skal 
+                                # bruke merge med + de endringene du har jobbet 
+                                # med.
 
 
 
