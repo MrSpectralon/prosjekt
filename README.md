@@ -103,16 +103,19 @@ Her anbefaler jeg at dere bruker [Lucid chart](https://www.lucidchart.com/pages/
 
 ### Databasen skal inneholde:
  - Bruker: 
+    - Bruker ID {PK}
     - Navn
     - Nummer
     - E-Mail
  - Drikke
+    - Drikke ID {PK}
     - Merke/produsent
     - Type
     - Pris
     - Sukkerinnhold
     - andre detaljer(optional)
   - Review
+    - PPK {Bruker ID, Drikke ID}
     - terningskast
     - Review
     - Forfatter
@@ -126,20 +129,79 @@ Her anbefaler jeg at dere bruker [Lucid chart](https://www.lucidchart.com/pages/
 
 ### GitLab
 
+#### Issueboard
+
 For å få bedre arbeidsflyt i GitLab, anbefaler jeg å ta i bruk Kanban brettet(issueboard). Dette er et verktøy som enkelt gir gruppa oversikt over hvilke oppgaver som gjenstår, hvem som jobber med hva, og hva som er ferdig.
 
-Issueboardet begynner ganske tomt, med bare to kategorier (Open og Closed), så for å utnytte brettet ordentlig er det viktig å legge til flere kategorier.
+![Git issueboard](/Images/Git-issueboard.png)
+
+Issueboardet begynner ganske tomt, med bare to kategorier (**Open** og **Closed**), så for å utnytte brettet ordentlig er det viktig å legge til flere kategorier.
 
 For å legge til flere kategorier trykker du på **Issues** -> **List** og deretter på **New issue** på høyre side av nye siden du åpner, som vist på bildet under.
 
 ![Label](Images/git-list-new-issue.png)
 
-Etter det så lager du nye labels 
+Etter dette trykker du på **Labels** dropdown menyen som ligger nede til venstre. Trykk deretter på **Create new Label** og skriv inn hva enn du ønsker å navngi den. 
 
 ![New label](Images/create-new-label.png)
 
+En god måte å bruke issueboardet på kan vœre å legge inn et issue så fort du kommer på en ting som bør implementeres - men ikke har tid til å gjøre akkurat nå.
+
+#### Webhook
+
+For dere som er spesielt interessert, kan der være gøy å få satt opp automatiske notifikasjoner i Discord når noen på gruppa gjør endringer på git.
+
+Oppsett av Webhook er
+
+
 ### Git Bash
 
+#### GitBash kommandoer
+
+Standard kommandoer som brukes mesteparten av tiden.
+
+```bash
+git status # Gir deg oversikt over alle filer som er endret eller nye.
+
+git add  # brukes for å legge til endrede filer i neste commit. 
+         # Du kan enten manuellt legge til alle filnavnene, eller bruke . 
+         # for å legge til alle filene som er merket med rødt i 
+         # 'git status' kommandoen.
+
+git commit -m 'message' # Klargjør filene som skal pushes opp til repo.
+
+git push # Pusher endringer opp til git repo(hvis mulig).
+
+git pull # Henter endringer fra git repo og legger det inn på dine lokale filer.
+
+```
+
+Ekstra Kommandoer for når flere branches er i bruk.
+
+```bash
+
+git switch <branch navn> # Går fra nåværende branch og inn på den 
+                            # branchen du skrev inn hvis den eksisterer.
+
+git switch -c <branch navn> # Gjør det samme som kommandoen over, bare denne 
+                               # lager en ny branch med navnet du skrev
+
+git push --set-upstream origin <branch navn> # Må gjøres første gang du skal 
+                                             # bruke push på en ny branch.
+                                             # Terminalen vil også gi beskjed 
+                                             # om dette om du glemmer det.
+
+git rebase origin <branch navn> # Dette er en funksjon som setter en branch som
+                                # "base". Den brukes når din branch ligger en 
+                                # del versjoner bak den branchen du ønsker å
+                                # "merge" med, og gjør slik at din versjon av 
+                                # alle filene på branchen er lik den du skal 
+                                # bruke merge med + de endringene du har jobbet 
+                                # med.
+
+
+
+```
 ---
 
 ## Database
