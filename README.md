@@ -8,17 +8,24 @@
 | Fornavn | Etternavn |
 
 ---
-
+## Introduksjon
 Prosjekt for elever på VGS.
 
-Målet med oppgaven er å lage et program som henter ut data og setter inn data i en database.
-Databasen skal inneholde tre forskjellige tabeller. Databasen og tabellene skal settes opp slik at de følger kravene til [3NF](https://en.wikipedia.org/wiki/Third_normal_form).
+Målet med oppgaven er å lage en database og et program som henter ut og setter inn data i denne databasen. 
+Strukturen på programmet skal settes opp som om det var et stort prosjekt - altså strukturere programmet slik at det har flere klasser og flere filer som brukes sammen.
 
-Programmet som kommuniserer med databasen kan skrives i Pyton eller JavaScript - Dette velger gruppen selv.
+
+Databasen og tabellene skal settes opp slik at den følger kravene til [3NF](https://en.wikipedia.org/wiki/Third_normal_form) standarden.
+
+Programmet som kommuniserer med databasen kan skrives i Python.
+
+Programmet kan senere utvides til å bruke Javascript som frontend og python som backend.(Dersom vi har tid til det)
 
 ---
 
-## **Huskeliste av oppgaver**
+# Oversikt
+
+## Huskeliste av oppgaver
 
 - [ ] [Lag fork av dette repositoryet](/README.md#fork-prosjekt)
 - [ ] [Legg til gruppemedlemmer i repo som utviklere.](/README.md#legge-til-gruppemedlemmer-i-repository)
@@ -27,15 +34,41 @@ Programmet som kommuniserer med databasen kan skrives i Pyton eller JavaScript -
 - [ ] [Lag plan for database struktur.](/README.md#lag-plan-for-database-struktur)
 - [ ] [Lag plan for prosjekt/program struktur.](/README.md#lag-plan-for-prosjekt/programm-struktur)
 
+- [ ] [Implementer databasen.]()
+- [ ] [Implementer  API som kan hente data og sette inn data i databasen. ]()
+
+### Brukerveileding og hjelp
+
+- [Generellt bruk av Git](/README.md#git)
+   - [GitLab](/README.md#gitlab)
+      - [Issueboard](/README.md#issueboard)
+      - [Notifikasjon via Webhook](/README.md#notifikasjon-via-webhook)
+   - [Git Bash](/README.md#git-bash)
+      - [Kommandoer](/README.md#gitbash-kommandoer)
+
+- [Database](/README.md#database)
+
 ---
 
-## Brukerveileding og hjelp
+## Oppgavetekst
 
-- [Generellt bruk av Git]()
-- [Database]()
+Dere skal lage en tjeneste som lar deg og din vennekrets(venners venner) skrive reviews om diverse produkter. Tjenesten må da lagre informasjon om brukere, produsent/merke, produkt og selvfølgelig reviewene til brukerne.
+
+Det skal være mulig for brukere å legge inn nye produsenter hvis de ikke allerede eksisterer i databasen. Det samme gjelder for produkter. 
+
+Brukere skal også ha mulighet til å slette sine reviews.
+
+Som søke filter skal det være mulig å hente ut alle reviews til hver spesifik bruker.
+Det skal være mulig å hente ut alle reviews om et spesifikt produkt.
+Det skal være mulig å hente ut alle produktene til en spesifik produsent/merke..
 
 
-## Fork prosjektet
+
+# TODO(s)
+
+
+## Fiks git repo
+### Fork prosjektet
 
 For å forke prosjektet så trykker du på **fork** som ligger oppe til høyre på denne siden (repository root directory).
 
@@ -43,9 +76,9 @@ Sett **Project name** til å være hydro_reviews_[+gruppenummer] (f.ex: hydro_re
 
 ![Fork repo](Images/fork-project.png)
 
----
 
-## Legge til gruppemedlemmer i repository 
+
+### Legge til gruppemedlemmer i repository 
 - Oppe i venstre hjørne av GitLab finner du **"Members"** under **"Project Information"** kategorien.
 - Trykk deretter på **"Invite members"** nær toppen på høyre siden av **"Members"** tabben.
 
@@ -57,9 +90,8 @@ Sett **Project name** til å være hydro_reviews_[+gruppenummer] (f.ex: hydro_re
 
 Etter dette er gjort så legger dere inn alle gruppe medlemmene inn på toppen av denne README.md fila.
 
----
 
-## Sett opp .gitignore for IDE filer
+### Sett opp .gitignore for IDE filer
 
 For å hindre at autogenererte filer som er forskjellige for alle på gruppen, er det nødvendig å sette opp et filter som utelokker disse i fra å bli lastet opp på deres repository.
 
@@ -81,27 +113,29 @@ Etter **.gitignore** fila er satt opp, vil `git status` kun vise de filene vi ø
 
 ![With Gitignore](Images/files-with-gitignore.png)
 
----
-
-## ~~Endre branch regler~~
+### ~~Endre branch regler~~
 
 Kan ikke brukes på gratis versioner av GitLab og GitHub 
 
 ---
 
-## Lag plan for prosjekt/program struktur
+## Planlegging
+
+### Lag plan for prosjekt/program struktur
 
 Tegn en plan/diagram for hvor mange klasser som skal være i programmet og hvordan de skal kommunisere sammen.
 Last det opp som et bilde eller PDF. Dere kan da tegne planen på papir eller bruke et program for tegningen. 
 
 ---
 
-## Lag plan for database struktur
+### Lag plan for database struktur
 
-Lag en UML tenging av tabeller og hvilken data som skal inn i tabellene, sett deretter opp relasjoner imellom tabellene, slik at samme dataen ikke blir lagret minst mulig ganger. 
+Lag en Conceptual model av tabeller og hvilken data som skal inn i tabellene, sett deretter opp relasjoner imellom tabellene, slik at samme dataen ikke blir lagret minst mulig ganger. 
 Her anbefaler jeg at dere bruker [Lucid chart](https://www.lucidchart.com/pages/) til å tegne diagrammene, ettersom det gjør ting oversiktlig og fint.
 
 ### Databasen skal inneholde:
+
+Databasen skal ha en oversit over alle brukerne med kontakt informasjonen demmes, dvs: navn, nummer etc...  
  - Bruker: 
     - Bruker ID {PK}
     - Navn
@@ -147,7 +181,7 @@ Etter dette trykker du på **Labels** dropdown menyen som ligger nede til venstr
 
 En god måte å bruke issueboardet på kan vœre å legge inn et issue så fort du kommer på en ting som bør implementeres - men ikke har tid til å gjøre akkurat nå.
 
-#### Webhook
+#### Notifikasjon via Webhook
 
 For dere som er spesielt interessert, kan der være gøy å få satt opp automatiske notifikasjoner i Discord når noen på gruppa gjør endringer på git.
 
