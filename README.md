@@ -60,14 +60,13 @@ Brukere skal også ha mulighet til å slette sine reviews.
 
 Som søke filter skal det være mulig å hente ut alle reviews til hver spesifik bruker.
 Det skal være mulig å hente ut alle reviews om et spesifikt produkt.
-Det skal være mulig å hente ut alle produktene til en spesifik produsent/merke..
-
+Det skal være mulig å hente ut alle produktene til en spesifik produsent/merke.
 
 
 # TODO(s)
 
 
-## Fiks git repo
+## Fiks git rep
 ### Fork prosjektet
 
 For å forke prosjektet så trykker du på **fork** som ligger oppe til høyre på denne siden (repository root directory).
