@@ -12,14 +12,6 @@
 Prosjekt for elever på VGS.
 
 Målet med oppgaven er å lage en database og et program som henter ut og setter inn data i denne databasen. 
-Strukturen på programmet skal settes opp som om det var et stort prosjekt - altså strukturere programmet slik at det har flere klasser og flere filer som brukes sammen.
-
-
-Databasen og tabellene skal settes opp slik at den følger kravene til [3NF](https://en.wikipedia.org/wiki/Third_normal_form) standarden.
-
-Programmet som kommuniserer med databasen kan skrives i Python.
-
-Programmet kan senere utvides til å bruke Javascript som frontend og python som backend.(Dersom vi har tid til det)
 
 ---
 
@@ -34,8 +26,8 @@ Programmet kan senere utvides til å bruke Javascript som frontend og python som
 - [ ] [Lag plan for database struktur.](/README.md#lag-plan-for-database-struktur)
 - [ ] [Lag plan for prosjekt/program struktur.](/README.md#lag-plan-for-prosjekt/programm-struktur)
 
-- [ ] [Implementer databasen.]()
-- [ ] [Implementer  API som kan hente data og sette inn data i databasen. ]()
+- [ ] [Implementer databasen.](/README.md#lag-plan-for-database-struktur)
+- [ ] [Implementer  API som kan hente data og sette inn data i databasen.](/README.md#)
 
 ### Brukerveileding og hjelp
 
@@ -51,9 +43,14 @@ Programmet kan senere utvides til å bruke Javascript som frontend og python som
 ---
 
 ## Oppgavetekst
+**Bakgrunn til oppgaven:**
+***Du og din vennegjeng er ekstremt glade i energidrikker, og finner en dag ut at dere skal lage en oversikt over alle energidrikkene dere har prøvd og dokumentere deres egen rating av dem.***
 
-Dere skal lage en tjeneste som lar deg og din vennekrets(venners venner) skrive reviews om diverse produkter. Tjenesten må da lagre informasjon om brukere, produsent/merke, produkt og selvfølgelig reviewene til brukerne.
+***For å få dette til kom dere frem til at det greieste hadde hvert å sette opp en database for lagring av data og en webside for enkel visuell tilgang til styring av databasen.***
 
+Løsningen trenger da en database og et annet program som håndterer kommunikasjon med databasen.
+
+Alle som er med å skrive reviews trenger sin egen bruker
 Det skal være mulig for brukere å legge inn nye produsenter hvis de ikke allerede eksisterer i databasen. Det samme gjelder for produkter. 
 
 Brukere skal også ha mulighet til å slette sine reviews.
@@ -63,10 +60,19 @@ Det skal være mulig å hente ut alle reviews om et spesifikt produkt.
 Det skal være mulig å hente ut alle produktene til en spesifik produsent/merke.
 
 
+Databasen og tabellene skal settes opp slik at den følger kravene til [3NF](https://en.wikipedia.org/wiki/Third_normal_form) standarden.
+
+Programmet som kommuniserer med databasen kan skrives i Python, C eller Java. Dette velger gruppa selv.
+
+Programmet kan senere utvides til å bruke Javascript som frontend istedet for å styre programmet via terminalen.(Dersom vi har tid til det)
+
+Strukturen på programmet skal settes opp som om det var et stort prosjekt - altså strukturere programmet slik at det har flere klasser og flere filer som brukes sammen. 
+
+
 # TODO(s)
 
 
-## Fiks git rep
+## Fiks git repo
 ### Fork prosjektet
 
 For å forke prosjektet så trykker du på **fork** som ligger oppe til høyre på denne siden (repository root directory).
@@ -120,6 +126,17 @@ Kan ikke brukes på gratis versioner av GitLab og GitHub
 
 ## Planlegging
 
+### Lag plan for database struktur
+
+Lag en ERD(Entity Realtionchip Diagram) av tabeller og hvilken data som skal inn i tabellene, sett deretter opp relasjoner imellom tabellene, slik at samme dataen blir lagret minst mulig ganger(3NF Standard).
+
+Her anbefaler jeg at dere bruker [Lucid chart](https://www.lucidchart.com/) til å tegne diagrammene, ettersom det et lett å lage en oversiktlig tegning av database strukturen. 
+
+Guide til å sette opp ordentlig ERD tegning:
+ [ERD part 1](https://www.youtube.com/watch?v=QpdhBUYk7Kk)
+ [ERD part 2](https://www.youtube.com/watch?v=-CuY5ADwn24)
+
+
 ### Lag plan for prosjekt/program struktur
 
 Tegn en plan/diagram for hvor mange klasser som skal være i programmet og hvordan de skal kommunisere sammen.
@@ -127,32 +144,29 @@ Last det opp som et bilde eller PDF. Dere kan da tegne planen på papir eller br
 
 ---
 
-### Lag plan for database struktur
+## Implementasjon
 
-Lag en Conceptual model av tabeller og hvilken data som skal inn i tabellene, sett deretter opp relasjoner imellom tabellene, slik at samme dataen ikke blir lagret minst mulig ganger. 
-Her anbefaler jeg at dere bruker [Lucid chart](https://www.lucidchart.com/pages/) til å tegne diagrammene, ettersom det gjør ting oversiktlig og fint.
+### Database
 
-### Databasen skal inneholde:
+Selve databasen er ikke anbefalt å laste opp på Git, så dere må eksportere SQL koden som lager databasen som egen SQL fil og laste den opp på git istedet. Egen fil med SQL kode som legger inn test data i databasen er også anbefalt, slik at det er lett å legge inn ny data automatisk dersom databasen skulle ødelegges eller lignende.
 
-Databasen skal ha en oversit over alle brukerne med kontakt informasjonen demmes, dvs: navn, nummer etc...  
- - Bruker: 
-    - Bruker ID {PK}
-    - Navn
-    - Nummer
-    - E-Mail
- - Drikke
-    - Drikke ID {PK}
-    - Merke/produsent
-    - Type
-    - Pris
-    - Sukkerinnhold
-    - andre detaljer(optional)
-  - Review
-    - PPK {Bruker ID, Drikke ID}
-    - terningskast
-    - Review
-    - Forfatter
-    - Hva er det/type og merke
+
+### Program
+
+Lite eksempel på inndeling: 
+-  **Database.py**: inneholder en klasse, og håndterer alle interaksjoner(queries) med databasen, og ingenting annet.
+- **ConsoleNavigation.py**: Håndterer all interaksjon og navigasjon gjort i konsoll.
+Eksempel på konsoll interaksjon: 
+```py
+print("""
+   Type one of the following letters to navigate through the menu.
+
+   u : Enter User options
+   f : Find reviews
+   x : Exits the program
+
+""")
+```
 
 ---
 
@@ -182,9 +196,9 @@ En god måte å bruke issueboardet på kan vœre å legge inn et issue så fort 
 
 #### Notifikasjon via Webhook
 
-For dere som er spesielt interessert, kan der være gøy å få satt opp automatiske notifikasjoner i Discord når noen på gruppa gjør endringer på git.
+For dere som er spesielt interessert, kan det være gøy å få satt opp automatiske notifikasjoner i Discord når det skjer oppdateringer på git.
 
-Oppsett av Webhook er
+Oppsett av Webhook er veldig simpelt.
 
 
 ### Git Bash
@@ -240,3 +254,11 @@ git rebase origin <branch navn> # Dette er en funksjon som setter en branch som
 ## Database
 
 ### Query
+
+
+
+let shortL = {topX = 0, topY = 1, middleX = 0, middleY = 0, bottomX = 0, bottomY = -1, bottomLeftX = 1, bottomLeftY = -1 }
+
+function rotateShortL(shortL){
+
+}
