@@ -19,15 +19,15 @@ Målet med oppgaven er å lage en database og et program som henter ut og setter
 
 ## Huskeliste av oppgaver
 
-- [ ] [Lag fork av dette repositoryet](/README.md#fork-prosjekt)
+- [ ] [Lag fork av dette repositoryet](/README.md#fork-prosjektet)
 - [ ] [Legg til gruppemedlemmer i repo som utviklere.](/README.md#legge-til-gruppemedlemmer-i-repository)
 - [ ] [Sett opp .gitignore for IDE filer.](/README.md#sett-opp-.gitignore-for-IDE-filer)
 - [ ] [~~Endre på branch regler - Ikke lov å "pushe" til master branch.~~](/README.md#endre-branch-regler)
 - [ ] [Lag plan for database struktur.](/README.md#lag-plan-for-database-struktur)
-- [ ] [Lag plan for prosjekt/program struktur.](/README.md#lag-plan-for-prosjekt/programm-struktur)
+- [ ] [Lag plan for prosjekt/program struktur.](/README.md#lag-plan-for-prosjektprogram-struktur)
 
-- [ ] [Implementer databasen.](/README.md#lag-plan-for-database-struktur)
-- [ ] [Implementer  API som kan hente data og sette inn data i databasen.](/README.md#)
+- [ ] [Implementer databasen.](/README.md#database)
+- [ ] [Implementer  API som kan hente data og sette inn data i databasen.](/README.md#program)
 
 ### Brukerveileding og hjelp
 
