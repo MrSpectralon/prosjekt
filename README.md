@@ -11,7 +11,13 @@
 ## Introduksjon
 Prosjekt for elever på VGS.
 
-Målet med oppgaven er å lage en database og et program som henter ut og setter inn data i denne databasen. 
+Målet med oppgaven er å lage en database og et program som kan hente ut og sette inn data i denne databasen.
+
+Via prosjektet får enn prøvd seg litt på: 
+- Planlegging av datastruktur
+- Gruppearbeid via Git
+- Praktisk eksempel og bruk av database med relasjoner mellom tabeller.
+
 
 ---
 
@@ -27,7 +33,7 @@ Målet med oppgaven er å lage en database og et program som henter ut og setter
 - [ ] [Lag plan for prosjekt/program struktur.](/README.md#lag-plan-for-prosjektprogram-struktur)
 
 - [ ] [Implementer databasen.](/README.md#database)
-- [ ] [Implementer  API som kan hente data og sette inn data i databasen.](/README.md#program)
+- [ ] [Implementer program som kan hente data og sette inn data i databasen.](/README.md#program)
 
 ### Brukerveileding og hjelp
 
@@ -44,19 +50,21 @@ Målet med oppgaven er å lage en database og et program som henter ut og setter
 
 ## Oppgavetekst
 **Bakgrunn til oppgaven:**
-***Du og din vennegjeng er ekstremt glade i energidrikker, og finner en dag ut at dere skal lage en oversikt over alle energidrikkene dere har prøvd og dokumentere deres egen rating av dem.***
+***Du og din vennegjeng er ekstremt glade i energidrikker, og finner en dag ut at dere skal lage en oversikt over alle energidrikkene dere har prøvd og dokumentere alle sine ratings av dem.***
 
-***For å få dette til kom dere frem til at det greieste hadde hvert å sette opp en database for lagring av data og en webside for enkel visuell tilgang til styring av databasen.***
+***For å få dette til kom dere frem til at det greieste hadde hvert å sette opp en database for lagring av data, og en webside for enkel visuell tilgang til styring av databasen.***
 
-Løsningen trenger da en database og et annet program som håndterer kommunikasjon med databasen.
+Løsningen trenger da en database som lagrer bruker informasjon og produkt informasjon fra flere produsenter i tillegg til brukernes rating av produktene.
+Databasen skal styres i fra et eksternt program som enkelt kan hente ut og legge inn mer data i databasen.
 
-Alle som er med å skrive reviews trenger sin egen bruker
-Det skal være mulig for brukere å legge inn nye produsenter hvis de ikke allerede eksisterer i databasen. Det samme gjelder for produkter. 
+**Funksjonaliteter som skal implementeres:**
 
-Brukere skal også ha mulighet til å slette sine reviews.
+Det må være mulig for brukere å legge inn nye produsenter og produkter hvis de ikke allerede eksisterer i databasen.
+
+Brukere skal også ha mulighet til å slette sine reviews av produkter. I tilfeller der brukere sletter sitt review av et produkt - og det ikke er noen andre som har review av produktet, skal også selve produktet slettes fra databasen.
 
 Som søke filter skal det være mulig å hente ut alle reviews til hver spesifik bruker.
-Det skal være mulig å hente ut alle reviews om et spesifikt produkt.
+Det skal være mulig å hente ut alle reviews skrevet om et spesifikt produkt.
 Det skal være mulig å hente ut alle produktene til en spesifik produsent/merke.
 
 
