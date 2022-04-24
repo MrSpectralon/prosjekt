@@ -57,24 +57,7 @@ Via prosjektet får enn prøvd seg litt på:
 Løsningen trenger da en database som lagrer bruker informasjon og produkt informasjon fra flere produsenter i tillegg til brukernes rating av produktene.
 Databasen skal styres i fra et eksternt program som enkelt kan hente ut og legge inn mer data i databasen.
 
-**Funksjonaliteter som skal implementeres:**
-
-Det må være mulig for brukere å legge inn nye produsenter og produkter hvis de ikke allerede eksisterer i databasen.
-
-Brukere skal også ha mulighet til å slette sine reviews av produkter. I tilfeller der brukere sletter sitt review av et produkt - og det ikke er noen andre som har review av produktet, skal også selve produktet slettes fra databasen.
-
-Som søke filter skal det være mulig å hente ut alle reviews til hver spesifik bruker.
-Det skal være mulig å hente ut alle reviews skrevet om et spesifikt produkt.
-Det skal være mulig å hente ut alle produktene til en spesifik produsent/merke.
-
-
-Databasen og tabellene skal settes opp slik at den følger kravene til [3NF](https://en.wikipedia.org/wiki/Third_normal_form) standarden.
-
-Programmet som kommuniserer med databasen kan skrives i Python, C eller Java. Dette velger gruppa selv.
-
-Programmet kan senere utvides til å bruke Javascript som frontend istedet for å styre programmet via terminalen.(Dersom vi har tid til det)
-
-Strukturen på programmet skal settes opp som om det var et stort prosjekt - altså strukturere programmet slik at det har flere klasser og flere filer som brukes sammen. 
+Programmet som kommuniserer med databasen kan skrives i Python, C eller Java. Dette velger gruppa selv. Javascript fungerer desverre ikke, siden det ikke finnes ordentlig API til databasestyring.
 
 
 # TODO(s)
@@ -85,7 +68,7 @@ Strukturen på programmet skal settes opp som om det var et stort prosjekt - alt
 
 For å forke prosjektet så trykker du på **fork** som ligger oppe til høyre på denne siden (repository root directory).
 
-Sett **Project name** til å være hydro_reviews_[+gruppenummer] (f.ex: hydro_reviews_01) og sett deretter prosjektet til å være privat.
+Sett **Project name** til å være hydro_reviews_[+gruppenavn] (f.ex: hydro_reviews_1337) og sett deretter prosjektet til å være privat.
 
 ![Fork repo](Images/fork-project.png)
 
@@ -112,7 +95,7 @@ Bildet under viser et resultatet av kommandoen `git status` i et nytt prosjekt d
 
 ![All files git](/Images/all-files-git.png)
 
-I dette tilfellet er vi kun interessert i å laste opp filene som de andre på gruppen trenger så vi setter opp **.gitignore** fila til å ignorere de uønskede filene:
+I dette tilfellet er vi kun interessert i å laste opp filene som de andre på gruppen trenger, så vi setter opp **.gitignore** fila til å ignorere de uønskede filene:
 ```.gitignore
 #Merk at alt som slutter med "/" er en mappe, og inneholder mange andre filer og mapper.
 #Ved å ekskludere ytterste mappen, ekskluderer du alt innenfor også.
@@ -121,8 +104,8 @@ I dette tilfellet er vi kun interessert i å laste opp filene som de andre på g
 gradle/
 local.properties
 ```
-
-Etter **.gitignore** fila er satt opp, vil `git status` kun vise de filene vi ønsker å laste opp>
+**Merk at alle filer som starter med'.' er skjulte og vises derfor ikke normalt sett i deres 'file explorer'**
+Etter **.gitignore** fila er satt opp, vil `git status` kun vise de filene vi ønsker å laste opp.
 
 ![With Gitignore](Images/files-with-gitignore.png)
 
@@ -141,8 +124,8 @@ Lag en ERD(Entity Realtionchip Diagram) av tabeller og hvilken data som skal inn
 Her anbefaler jeg at dere bruker [Lucid chart](https://www.lucidchart.com/) til å tegne diagrammene, ettersom det et lett å lage en oversiktlig tegning av database strukturen. 
 
 Guide til å sette opp ordentlig ERD tegning:
- [ERD part 1](https://www.youtube.com/watch?v=QpdhBUYk7Kk)
- [ERD part 2](https://www.youtube.com/watch?v=-CuY5ADwn24)
+[ERD part 1](https://www.youtube.com/watch?v=QpdhBUYk7Kk)
+[ERD part 2](https://www.youtube.com/watch?v=-CuY5ADwn24)
 
 
 ### Lag plan for prosjekt/program struktur
@@ -161,20 +144,53 @@ Selve databasen er ikke anbefalt å laste opp på Git, så dere må eksportere S
 
 ### Program
 
+Strukturen på programmet skal settes opp som om det var et stort prosjekt - altså strukturere programmet slik at det har flere klasser og flere filer som brukes sammen.
+
 Lite eksempel på inndeling: 
 -  **Database.py**: inneholder en klasse, og håndterer alle interaksjoner(queries) med databasen, og ingenting annet.
 - **ConsoleNavigation.py**: Håndterer all interaksjon og navigasjon gjort i konsoll.
 Eksempel på konsoll interaksjon: 
 ```py
-print("""
-   Type one of the following letters to navigate through the menu.
 
-   u : Enter User options
-   f : Find reviews
-   x : Exits the program
+bool running = False
+while (running)
+   print("""
+      Type one of the following letters to navigate through the menu.
 
-""")
+      u : Enter User options
+      f : Find reviews
+      x : Exits the program
+   """)
+
+   choice = input("Action: ")
+
+   match choice.lower():
+      case 'u':
+         user_option_menu()
+      case 'f':
+         find_reviews()
+      case 'x':
+         running = false
+      case _:
+         print("No such entry.")
+
+
 ```
+
+**Funksjonaliteter som skal implementeres:**
+
+- Det må være mulig for brukere å legge inn nye produsenter og produkter hvis de ikke allerede eksisterer i databasen.
+
+- Brukere skal også ha mulighet til å slette sine reviews av produkter. I tilfeller der brukere sletter sitt review av et produkt - og det ikke er noen andre som har review av produktet, skal også selve produktet slettes fra databasen.
+
+- Som søke filter skal det være mulig å hente ut alle reviews til en spesifik bruker.
+
+- Det skal være mulig å hente ut alle reviews skrevet om et spesifikt produkt.
+
+- Det skal være mulig å hente ut alle produktene til en spesifik produsent/merke.
+
+
+Programmet kan senere utvides til å bruke Javascript som frontend istedet for å styre programmet via terminalen. Alternativt kan dere bruke biblioteker innen programmerinsspråket dere har valgt, og lage en webtjeneste for å styre transaksjoner med databasen derfra. (Dersom vi har tid til det)
 
 ---
 
@@ -253,20 +269,9 @@ git rebase origin <branch navn> # Dette er en funksjon som setter en branch som
                                 # alle filene på branchen er lik den du skal 
                                 # bruke merge med + de endringene du har jobbet 
                                 # med.
-
-
-
 ```
 ---
 
 ## Database
 
 ### Query
-
-
-
-let shortL = {topX = 0, topY = 1, middleX = 0, middleY = 0, bottomX = 0, bottomY = -1, bottomLeftX = 1, bottomLeftY = -1 }
-
-function rotateShortL(shortL){
-
-}
