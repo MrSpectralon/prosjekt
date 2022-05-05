@@ -40,15 +40,15 @@ Karakter inndeling:
 
 ## Huskeliste av oppgaver
 
-1. [Lag fork av dette repositoryet](/README.md#fork-prosjektet)
-2. [Legg til gruppemedlemmer i repo som utviklere.](/README.md#legge-til-gruppemedlemmer-i-repository)
-3. [Sett opp .gitignore for IDE filer.](/README.md#sett-opp-.gitignore-for-IDE-filer)
+1. [Lag fork av dette repositoryet (2p)](/README.md#fork-prosjektet)
+2. [Legg til gruppemedlemmer i repo som utviklere. (3p)](/README.md#legge-til-gruppemedlemmer-i-repository)
+3. [~~Sett opp .gitignore for IDE filer.~~](/README.md#sett-opp-.gitignore-for-IDE-filer)
 4. [~~Endre på branch regler - Ikke lov å "pushe" til master branch.~~](/README.md#endre-branch-regler)
-5. [Lag plan for database struktur.](/README.md#lag-plan-for-database-struktur)
-6. [Lag plan for prosjekt/program struktur.](/README.md#lag-plan-for-prosjektprogram-struktur)
+5. [Lag plan for database struktur. (10p)](/README.md#lag-plan-for-database-struktur)
+6. [Lag plan for prosjekt/program struktur. (10p)](/README.md#lag-plan-for-prosjektprogram-struktur)
 
-7. [Implementer databasen.](/README.md#database)
-8. [Implementer program som kan hente data og sette inn data i databasen.](/README.md#program)
+7. [Implementer databasen. (20p)](/README.md#database)
+8. [Implementer program som kan hente data og sette inn data i databasen. (55p)](/README.md#program)
 
 ### Brukerveileding og hjelp
 
@@ -108,7 +108,7 @@ Etter dette er gjort så legger dere inn alle gruppe medlemmene inn på toppen a
 
 ### ~~Sett opp .gitignore for IDE filer~~
 
-**Python HAR IKKE EKSTERN COMPILER OG ANDRE IDE SPESIFIKE FILER. DETTE STEGET TRENGS IKKE**
+**PYTHON HAR IKKE EKSTERN COMPILER OG ANDRE IDE SPESIFIKE FILER. DETTE STEGET TRENGS IKKE**
 
 For å hindre at autogenererte filer som er forskjellige for alle på gruppen, er det nødvendig å sette opp et filter som utelokker disse i fra å bli lastet opp på deres repository.
 
@@ -142,7 +142,7 @@ Her skulle det settes opp regler som gjør det umulig å laste opp endringer dir
 ### Lag plan for database struktur 
 **Totalt tilgjengelig 10p.**
 
-Lag en ERD(Entity Realtionchip Diagram) av tabeller og hvilken data som skal inn i tabellene, sett deretter opp relasjoner imellom tabellene, slik at samme dataen blir lagret minst mulig ganger.
+Lag en ERD(Entity Realtionchip Diagram) av tabeller og hvilken data som skal inn i tabellene, sett deretter opp relasjoner imellom tabellene, slik at samme dataen blir lagret minst mulig ganger. (10p)
 
 Her anbefaler jeg at dere bruker [Lucid chart](https://www.lucidchart.com/) til å tegne diagrammene, ettersom det et lett å lage en oversiktlig tegning av database strukturen. 
 
@@ -160,7 +160,7 @@ Strukturen på programmet skal settes opp som om det var et stort prosjekt - alt
 
 Tegn en plan/diagram over hvilke klasser som skal være i programmet og beskriv kort hvordan de skal kommunisere sammen og hva de gjør.
 
-Last planen opp som et bilde eller PDF. Dere kan da tegne planen på papir eller bruke et program for tegningen.
+Last planen opp som et bilde eller PDF. Dere kan da tegne planen på papir eller bruke et program for tegningen. (10p)
 
 Her er eksempel på klasse strukturen på et større prosjekt:
 ![Class structure](/readmeImages/projectStructure.png)
@@ -170,8 +170,9 @@ Her er eksempel på klasse strukturen på et større prosjekt:
 ## Implementasjon
 
 ### Database
+
 **Totalt tilgjengelig 20 poeng**
-Selve databasen er ikke anbefalt å laste opp på Git, så dere må eksportere SQL koden som lager databasen som egen SQL fil og laste den opp på git istedet.
+Selve databasen er ikke anbefalt å laste opp på Git, så dere må eksportere SQL koden som lager databasen som egen SQL fil og laste den opp på git istedet. (10p)
 
 **Implementert database må kunne håndtere:**
 - Mange brukere, produsenter, produkter og reviews av produkter. (2p)
@@ -190,7 +191,8 @@ Eksempel på konsoll interaksjon:
 ```py
 
 def main_menu()
-   """Main message loop that gives the user the ability to navigate through the functions in this simple application"""
+   """Main message loop that gives the user the ability to 
+   navigate through the functions in this simple application"""
    bool running = False
    while (running)
       print("""
@@ -220,26 +222,26 @@ def main_menu()
 
 **NB: SIDEN DERE ALLEREDE HAR STARTET PÅ MED PROSJEKTET UTEN BEGRNSING PÅ KODESPRÅK, SÅ SETTER JEG IKKE KRAV TIL AT DET SKAL VÆRE KODET I PYTHON**
 
-- Alle funksjoner skal ha "docstrings" som kort beskriver hva funksjonen gjør og hvordan den brukes. 
+- Alle funksjoner skal ha "docstrings" som kort beskriver hva funksjonen gjør og hvordan den brukes. (10p)
 
 - Når brukere skriver review om et produkt, fyller de først inn produsent etterfulgt med produktnavn. Dersom dette produktet allerede er registrert i databasen skal brukeren slippe å skrive inn mer informasjon om produktet og blir derfra videreført til å skrive sin review.
-Hvis produktet ikke eksisterer i databasen fra før, blir brukeren bedt om å fylle inn resten av produktinformasjonen.
+Hvis produktet ikke eksisterer i databasen fra før, blir brukeren bedt om å fylle inn resten av produktinformasjonen. (5p)
 
-- Brukere skal også ha mulighet til å slette sine reviews av produkter. Dersom en bruker sletter sin review av et produkt, og det ikke er noen andre brukere som har skrevet reviews om produktet - så skal produktet også slettes fra databasen.
+- Brukere skal også ha mulighet til å slette sine reviews av produkter. Dersom en bruker sletter sin review av et produkt, og det ikke er noen andre brukere som har skrevet reviews om produktet - så skal produktet også slettes fra databasen. (5p)
 
-- Som søke filter skal det være mulig å hente ut alle reviews en spesifik bruker har skrevet. (Altså du søker etter en bruker og så vises alle reviews den brukeren har skrevet)
+- Som søke filter skal det være mulig å hente ut alle reviews en spesifik bruker har skrevet. (Altså du søker etter en bruker og så vises alle reviews den brukeren har skrevet) (5p)
 
-- Det skal være mulig å hente ut alle reviews skrevet om et gitt produkt.
+- Det skal være mulig å hente ut alle reviews skrevet om et gitt produkt. (5p)
 
-- Det skal være mulig å hente ut alle produktene til en gitt produsent/merke.
+- Det skal være mulig å hente ut alle produktene til en gitt produsent/merke. (5p)
 
-- Det skal være mulig å hente ut alle produkter som har fått gjennomsnittlig terningskast X eller høyere.
+- Det skal være mulig å hente ut alle produkter som har fått gjennomsnittlig terningskast X eller høyere. (5p)
 
-- Det skal være mulig å hente ut alle produkter som har fått terningskast høyere enn X fra en gitt bruker.
+- Det skal være mulig å hente ut alle produkter som har fått terningskast høyere enn X fra en gitt bruker. (5p)
 
-- Det skal også være en funksjon som lister ut top tre "Bang for the buck" produktene. (Altså pris delt på gjennomsnittlig terningskast)
+- Det skal også være en funksjon som lister ut top tre "Bang for the buck" produktene. (Altså pris delt på gjennomsnittlig terningskast) (5p)
 
-- SQL queries skal være sikret mot SQL-injection angrep.
+- SQL queries skal være sikret mot SQL-injection angrep. (5p)
 
 Programmet kan senere utvides til å bruke webtjeneste istedet for å styre programmet via terminalen. (Dersom vi har tid til det)
 
@@ -341,6 +343,5 @@ CREATE TABLE `Location` (
 );
 
 ```
-
-### Query
-
+Forklaring på hvorfor det brukes:
+[https://www.youtube.com/watch?v=1kDVpWVCrEw](https://www.youtube.com/watch?v=1kDVpWVCrEw)
