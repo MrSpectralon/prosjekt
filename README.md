@@ -19,13 +19,20 @@ Via prosjektet får enn prøvd seg litt på:
 - SQL queries.
 
 
-
 ---
 
 ## Vurdering
 
 Oppgaven vil bli gitt en total vurdering med poeng opp til 100.
 Hver oppgave har en egen verdi av poeng.
+
+Karakter inndeling:
+89-100 = 6
+77-88 = 5
+65-76 = 4
+53-64 = 3
+41-52 = 2
+0-40 = 1
 
 ---
 
@@ -37,11 +44,11 @@ Hver oppgave har en egen verdi av poeng.
 2. [Legg til gruppemedlemmer i repo som utviklere.](/README.md#legge-til-gruppemedlemmer-i-repository)
 3. [Sett opp .gitignore for IDE filer.](/README.md#sett-opp-.gitignore-for-IDE-filer)
 4. [~~Endre på branch regler - Ikke lov å "pushe" til master branch.~~](/README.md#endre-branch-regler)
-5. [Lag plan for database struktur.](/README.md#lag-plan-for-database-struktur) 10p
-6. [Lag plan for prosjekt/program struktur.](/README.md#lag-plan-for-prosjektprogram-struktur) 10p
+5. [Lag plan for database struktur.](/README.md#lag-plan-for-database-struktur)
+6. [Lag plan for prosjekt/program struktur.](/README.md#lag-plan-for-prosjektprogram-struktur)
 
-7. [Implementer databasen.](/README.md#database) 20p
-8. [Implementer program som kan hente data og sette inn data i databasen.](/README.md#program) 60p
+7. [Implementer databasen.](/README.md#database)
+8. [Implementer program som kan hente data og sette inn data i databasen.](/README.md#program)
 
 ### Brukerveileding og hjelp
 
@@ -58,11 +65,11 @@ Hver oppgave har en egen verdi av poeng.
 
 ## Oppgavetekst
 **Bakgrunn til oppgaven:**
-***Du og din vennegjeng er ekstremt glade i energidrikker, og finner en dag ut at dere skal lage en oversikt over alle energidrikkene dere har prøvd og dokumentere alle sine ratings av dem.***
+***Du og din vennegjeng er ekstremt glade i energidrikker, og finner en dag ut at dere skal lage en oversikt over alle energidrikkene dere har prøvd og alles mening om de forskjellige energidrikkene.***
 
 ***For å få dette til kom dere frem til at det greieste hadde hvert å sette opp en database for lagring av data, og en simpel meny laget i terminal for enkel tilgang til styring av databasen.***
 
-- Løsningen trenger da en database som lagrer bruker informasjon og produkt informasjon fra flere produsenter i tillegg til brukernes rating av produktene.
+- Løsningen trenger da en database som lagrer informasjon om; brukere, produkter, produsenter og brukernes vurdering av produktene.
 - Databasen skal styres i fra et eksternt program som enkelt kan hente ut og legge inn mer data i databasen.
 
 - Programmet som kommuniserer med databasen skrives i Python.
@@ -71,9 +78,10 @@ Hver oppgave har en egen verdi av poeng.
 # TODO(s)
 
 
-## Fiks git repo (10p)
+## Fiks git repo
+Totalt 5 poeng.
 ### Fork prosjektet
-
+(2p)
 **KUN ÉN PERSON PÅ GRUPPA TRENGER Å GJØRE DETTE STEGET.**
 
 For å forke prosjektet så trykker du på **fork** som ligger oppe til høyre på hoved siden til dette repositoryet (root directory).
@@ -85,6 +93,7 @@ Sett **Project name** til å være hydro_reviews_[+gruppenavn] (f.ex: hydro_revi
 
 
 ### Legge til gruppemedlemmer i repository 
+(3p)
 - Oppe i venstre hjørne av GitLab finner du **"Members"** under **"Project Information"** kategorien.
 - Trykk deretter på **"Invite members"** nær toppen på høyre siden av **"Members"** tabben.
 
@@ -131,7 +140,7 @@ Her skulle det settes opp regler som gjør det umulig å laste opp endringer dir
 ## Planlegging
 
 ### Lag plan for database struktur 
-Totalt tilgjengelig 10p.
+**Totalt tilgjengelig 10p.**
 
 Lag en ERD(Entity Realtionchip Diagram) av tabeller og hvilken data som skal inn i tabellene, sett deretter opp relasjoner imellom tabellene, slik at samme dataen blir lagret minst mulig ganger.
 
@@ -145,11 +154,12 @@ Guide til å sette opp ordentlig ERD tegning:
 ERD'en skal lastes opp i repo som bilde eller pdf fil. 
 
 ### Lag plan for prosjekt/program struktur
-Totalt tilgjengelig 10p.
+**Totalt tilgjengelig 10p.**
 
 Strukturen på programmet skal settes opp som om det var et stort prosjekt - altså strukturere programmet slik at det har flere klasser og flere filer som brukes sammen.
 
-Tegn en plan/diagram for hvor mange klasser som skal være i programmet og hvordan de skal kommunisere sammen.
+Tegn en plan/diagram over hvilke klasser som skal være i programmet og beskriv kort hvordan de skal kommunisere sammen og hva de gjør.
+
 Last planen opp som et bilde eller PDF. Dere kan da tegne planen på papir eller bruke et program for tegningen.
 
 Her er eksempel på klasse strukturen på et større prosjekt:
@@ -160,63 +170,76 @@ Her er eksempel på klasse strukturen på et større prosjekt:
 ## Implementasjon
 
 ### Database
+**Totalt tilgjengelig 20 poeng**
+Selve databasen er ikke anbefalt å laste opp på Git, så dere må eksportere SQL koden som lager databasen som egen SQL fil og laste den opp på git istedet.
 
-Selve databasen er ikke anbefalt å laste opp på Git, så dere må eksportere SQL koden som lager databasen som egen SQL fil og laste den opp på git istedet. 
-Egen fil med SQL kode for å legge inn test data i databasen er også anbefalt, slik at det er lett å legge inn ny data automatisk dersom databasen skulle ødelegges eller lignende.
+**Implementert database må kunne håndtere:**
+- Mange brukere, produsenter, produkter og reviews av produkter. (2p)
+- En produsent har flere produkter. (2p)
+- X antall brukere skal kunne skrive sine reviews om ett produkt. (2p)
+- En bruker skal kunne skrive reviews om X antall produkter. (2p)
+- Om en produsent slettes fra databasen, skal alle produktene som tilhører produsenten også slettes. (2p)
 
 
 ### Program
-
+**Totalt tilgjengelig 55 poeng**
 Lite eksempel på inndeling: 
 -  **Database.py**: inneholder en klasse, og håndterer alle interaksjoner(queries) med databasen, og ingenting annet.
 - **ConsoleNavigation.py**: Håndterer all interaksjon og navigasjon gjort i konsoll.
 Eksempel på konsoll interaksjon: 
 ```py
 
-bool running = False
-while (running)
-   print("""
-      Type one of the following letters to navigate through the menu.
-
-      u : Enter User options
-      f : Find reviews
-      x : Exits the program
-   """)
-
-   choice = input("Action: ")
-
-   match choice.lower():
-      case 'u':
-         user_option_menu()
-      case 'f':
-         find_reviews()
-      case 'x':
-         running = false
-      case _:
-         print("No such entry.")
+def main_menu()
+   """Main message loop that gives the user the ability to navigate through the functions in this simple application"""
+   bool running = False
+   while (running)
+      print("""
+         Type one of the following letters to navigate through the menu.
+   
+         u : Enter User options
+         f : Find reviews
+         x : Exits the program
+      """)
+   
+      choice = input("Action: ")
+   
+      match choice.lower():
+         case 'u':
+            user_option_menu()
+         case 'f':
+            find_reviews()
+         case 'x':
+            running = false
+         case _:
+            print("No such entry.")
 
 
 ```
 
 **Funksjonaliteter som skal implementeres:**
 
-**SIDEN DERE ALLEREDE HAR STARTET PÅ WEBDESIGN, KAN DERE FORTSETTE MED DETTE, MEN FUNKSJONALITETER SKAL OGSÅ VÆRE TILGJENGELIG I KOMMANDO LINJE (SE KODE EKSEMPEL OVENFOR)**
+**NB: SIDEN DERE ALLEREDE HAR STARTET PÅ MED PROSJEKTET UTEN BEGRNSING PÅ KODESPRÅK, SÅ SETTER JEG IKKE KRAV TIL AT DET SKAL VÆRE KODET I PYTHON**
 
-- Det må være mulig for brukere å legge inn nye produsenter og produkter hvis de ikke allerede eksisterer i databasen.
+- Alle funksjoner skal ha "docstrings" som kort beskriver hva funksjonen gjør og hvordan den brukes. 
 
-- Brukere skal også ha mulighet til å slette sine reviews av produkter. I tilfeller der brukere sletter sitt review av et produkt - og det ikke er noen andre som har review av produktet, skal også selve produktet slettes fra databasen.
+- Når brukere skriver review om et produkt, fyller de først inn produsent etterfulgt med produktnavn. Dersom dette produktet allerede er registrert i databasen skal brukeren slippe å skrive inn mer informasjon om produktet og blir derfra videreført til å skrive sin review.
+Hvis produktet ikke eksisterer i databasen fra før, blir brukeren bedt om å fylle inn resten av produktinformasjonen.
+
+- Brukere skal også ha mulighet til å slette sine reviews av produkter. Dersom en bruker sletter sin review av et produkt, og det ikke er noen andre brukere som har skrevet reviews om produktet - så skal produktet også slettes fra databasen.
 
 - Som søke filter skal det være mulig å hente ut alle reviews en spesifik bruker har skrevet. (Altså du søker etter en bruker og så vises alle reviews den brukeren har skrevet)
 
-- Det skal være mulig å hente ut alle reviews skrevet om et spesifikt produkt.
+- Det skal være mulig å hente ut alle reviews skrevet om et gitt produkt.
 
-- Det skal være mulig å hente ut alle produktene til en spesifik produsent/merke.
+- Det skal være mulig å hente ut alle produktene til en gitt produsent/merke.
 
 - Det skal være mulig å hente ut alle produkter som har fått gjennomsnittlig terningskast X eller høyere.
 
+- Det skal være mulig å hente ut alle produkter som har fått terningskast høyere enn X fra en gitt bruker.
+
 - Det skal også være en funksjon som lister ut top tre "Bang for the buck" produktene. (Altså pris delt på gjennomsnittlig terningskast)
 
-
+- SQL queries skal være sikret mot SQL-injection angrep.
 
 Programmet kan senere utvides til å bruke webtjeneste istedet for å styre programmet via terminalen. (Dersom vi har tid til det)
 
@@ -320,3 +343,4 @@ CREATE TABLE `Location` (
 ```
 
 ### Query
+
