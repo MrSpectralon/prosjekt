@@ -27,12 +27,12 @@ Oppgaven vil bli gitt en total vurdering med poeng opp til 100.
 Hver oppgave har en egen verdi av poeng.
 
 Karakter inndeling:
-89-100 = 6
-77-88 = 5
-65-76 = 4
-53-64 = 3
-41-52 = 2
-0-40 = 1
+> 89-100 = 6
+> 77-88 = 5
+> 65-76 = 4
+> 53-64 = 3
+> 41-52 = 2
+> 0-40 = 1
 
 ---
 
@@ -82,6 +82,7 @@ Karakter inndeling:
 Totalt 5 poeng.
 ### Fork prosjektet
 (2p)
+
 **KUN ÉN PERSON PÅ GRUPPA TRENGER Å GJØRE DETTE STEGET.**
 
 For å forke prosjektet så trykker du på **fork** som ligger oppe til høyre på hoved siden til dette repositoryet (root directory).
@@ -125,7 +126,7 @@ I dette tilfellet er vi kun interessert i å laste opp filene som de andre på g
 gradle/
 local.properties
 ```
-**Merk at alle filer som starter med'.' er skjulte og vises derfor ikke normalt sett i deres 'file explorer'**
+<!-- **Merk at alle filer som starter med'.' er skjulte og vises derfor ikke normalt sett i deres 'file explorer'** -->
 Etter **.gitignore** fila er satt opp, vil `git status` kun vise de filene vi ønsker å laste opp.
 
 ![With Gitignore](readmeImages/files-with-gitignore.png)
@@ -140,13 +141,14 @@ Her skulle det settes opp regler som gjør det umulig å laste opp endringer dir
 ## Planlegging
 
 ### Lag plan for database struktur 
-**Totalt tilgjengelig 10p.**
+**Totalt tilgjengelig 10 poeng.**
 
 Lag en ERD(Entity Realtionchip Diagram) av tabeller og hvilken data som skal inn i tabellene, sett deretter opp relasjoner imellom tabellene, slik at samme dataen blir lagret minst mulig ganger. (10p)
 
 Her anbefaler jeg at dere bruker [Lucid chart](https://www.lucidchart.com/) til å tegne diagrammene, ettersom det et lett å lage en oversiktlig tegning av database strukturen. 
 
 Guide til å sette opp ordentlig ERD tegning:
+
 [ERD part 1: https://www.youtube.com/watch?v=QpdhBUYk7Kk](https://www.youtube.com/watch?v=QpdhBUYk7Kk)
 
 [ERD part 2: https://www.youtube.com/watch?v=-CuY5ADwn24](https://www.youtube.com/watch?v=-CuY5ADwn24)
@@ -154,7 +156,7 @@ Guide til å sette opp ordentlig ERD tegning:
 ERD'en skal lastes opp i repo som bilde eller pdf fil. 
 
 ### Lag plan for prosjekt/program struktur
-**Totalt tilgjengelig 10p.**
+**Totalt tilgjengelig 10 poeng.**
 
 Strukturen på programmet skal settes opp som om det var et stort prosjekt - altså strukturere programmet slik at det har flere klasser og flere filer som brukes sammen.
 
@@ -171,8 +173,8 @@ Her er eksempel på klasse strukturen på et større prosjekt:
 
 ### Database
 
-**Totalt tilgjengelig 20 poeng**
-Selve databasen er ikke anbefalt å laste opp på Git, så dere må eksportere SQL koden som lager databasen som egen SQL fil og laste den opp på git istedet. (10p)
+**Totalt tilgjengelig 15 poeng**
+Selve databasen er ikke anbefalt å laste opp på Git, så dere må eksportere SQL koden som lager databasen som egen SQL fil og laste den opp på git istedet. (5p)
 
 **Implementert database må kunne håndtere:**
 - Mange brukere, produsenter, produkter og reviews av produkter. (2p)
@@ -183,7 +185,7 @@ Selve databasen er ikke anbefalt å laste opp på Git, så dere må eksportere S
 
 
 ### Program
-**Totalt tilgjengelig 55 poeng**
+**Totalt tilgjengelig 60 poeng**
 Lite eksempel på inndeling: 
 -  **Database.py**: inneholder en klasse, og håndterer alle interaksjoner(queries) med databasen, og ingenting annet.
 - **ConsoleNavigation.py**: Håndterer all interaksjon og navigasjon gjort i konsoll.
@@ -218,11 +220,13 @@ def main_menu()
 
 ```
 
+- Kode smart og ryddig, dvs; Hyppig bruk av funksjoner som utfører små prosesser, som enten brukes flere ganger eller deler opp koden og gjør den lettere å forstå. (10p)
+
 **Funksjonaliteter som skal implementeres:**
 
 **NB: SIDEN DERE ALLEREDE HAR STARTET PÅ MED PROSJEKTET UTEN BEGRNSING PÅ KODESPRÅK, SÅ SETTER JEG IKKE KRAV TIL AT DET SKAL VÆRE KODET I PYTHON**
 
-- Alle funksjoner skal ha "docstrings" som kort beskriver hva funksjonen gjør og hvordan den brukes. (10p)
+- Alle funksjoner skal ha "docstrings" som kort beskriver hva funksjonen gjør og hvordan den brukes. (5p)
 
 - Når brukere skriver review om et produkt, fyller de først inn produsent etterfulgt med produktnavn. Dersom dette produktet allerede er registrert i databasen skal brukeren slippe å skrive inn mer informasjon om produktet og blir derfra videreført til å skrive sin review.
 Hvis produktet ikke eksisterer i databasen fra før, blir brukeren bedt om å fylle inn resten av produktinformasjonen. (5p)
